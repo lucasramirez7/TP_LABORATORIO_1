@@ -1,0 +1,103 @@
+# depslib dependency file v1.0
+1634434512 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\trabajo practico 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634434452 c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\trabajo practico 2\prototype.h
+
+1634429209 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\trabajo practico 2\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634414069 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\trabajo practico 2\f remove.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634435350 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\trabajo practico 2\register.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634435128 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\trabajo practico 2\modificate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634414069 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\tp_[2]\f remove.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634434452 c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\tp_[2]\prototype.h
+
+1634434512 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\tp_[2]\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634439092 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\tp_[2]\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634439092 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\tp_[2]\modificate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634439092 source:c:\users\lucas\desktop\trabajos practicos c\trabajo practico 1\paralelos\tp_[2]\register.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634414069 source:c:\users\lucas\desktop\trabajos practicos c\tp_[2]\f remove.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634618628 c:\users\lucas\desktop\trabajos practicos c\tp_[2]\prototype.h
+
+1634679575 source:c:\users\lucas\desktop\trabajos practicos c\tp_[2]\functions.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634679486 source:c:\users\lucas\desktop\trabajos practicos c\tp_[2]\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634439092 source:c:\users\lucas\desktop\trabajos practicos c\tp_[2]\modificate.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634439092 source:c:\users\lucas\desktop\trabajos practicos c\tp_[2]\register.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
+1634671514 source:c:\users\lucas\desktop\trabajos practicos c\tp_[2]\hardcodeo.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"prototype.h"
+
