@@ -249,7 +249,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee) {
 
 	system("cls");
 
-	puts("************** B A J A   D E   E M P L E A D O **************\n");
+	puts("**************Baja empleado**************\n");
 	controller_ListEmployee(pArrayListEmployee);
 	puts("Ingrese el id que desea eliminar: ");
     scanf("%d", &id);
@@ -346,7 +346,47 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
  */
 int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
 {
-    return 1;
+    int controller_saveAsText(char* path , LinkedList* pArrayListEmployee) {
+
+	FILE* pFile = NULL;
+	sEmployee* employee = NULL;
+	int ok = 0;
+	int id;
+	char name[50];
+	int hours;
+	int salary;
+
+	system("cls");
+
+	if(path != NULL && pArrayListEmployee != NULL) {
+
+		pFile = fopen(path, "w");
+
+		if(pFile != NULL) {
+			fprintf(pFile,"id,nombre,horasTrabajadas,sueldo\n");
+
+			for(int i = 0; i<ll_len(pArrayListEmployee); i++) {
+
+				pFile = ll_get(pArrayListEmployee, i);
+
+				if(pFile != NULL) {
+
+					if(employee_getId(pFile, &id) == 0 && employee_getNombre(employee, name) == 0 &&
+					employee_gethoursWorked(employee,hours) == 0 && employee_getSalary(employee, &salary) == 0) {
+
+						fprintf(pFile,"%d,%s,%d,%d\n", id,name,hours,salary);
+						ok = 1;
+                        puts("Se ha guardado con exito");
+					}
+				}
+			}
+
+			fclose(pFile);
+		}
+	}
+
+	return ok;
+}
 }
 
 /** \brief Guarda los datos de los empleados en el archivo data.csv (modo binario).
@@ -356,5 +396,37 @@ int controller_saveAsText(char* path , LinkedList* pArrayListEmployee)
  * \return int
  *
  */
+int controller_saveAsBinary(char* path , LinkedList* pArrayListEmployee){
 
+
+	FILE* pFile = NULL;
+	sEmployee* employee = NULL;
+	int ok = 0;
+
+	system("cls");
+
+	pFile = fopen(path, "wb");
+
+	if(pFile != NULL) {
+
+		for(int i = 0; i<ll_len(pArrayListEmployee); i++) {
+
+			employee = ll_get(pArrayListEmployee, i);
+
+			if(employee != NULL){
+
+					fwrite(employee,sizeof(sEmployee),1,pFile);
+					ok = 1;
+
+			}
+		}
+	}
+
+    return ok;
+
+
+
+
+
+}
 

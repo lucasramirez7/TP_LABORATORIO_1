@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1637972984 source:c:\users\lucas\desktop\tp_2\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"employee.h"
+	"mi libreria.h"
+	"workStation.h"
+
+1637974555 source:c:\users\lucas\desktop\tp_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"employee.h"
+	"mi libreria.h"
+
+1637972732 c:\users\lucas\desktop\tp_2\employee.h
+	"workStation.h"
+
+1637614324 c:\users\lucas\desktop\tp_2\mi libreria.h
+
+1637627967 source:c:\users\lucas\desktop\tp_2\mi libreria.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"mi libreria.h"
+
+1637974534 source:c:\users\lucas\desktop\tp_2\datawarehouse.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"dataWarehouse.h"
+	"employee.h"
+
+1637974370 c:\users\lucas\desktop\tp_2\datawarehouse.h
+	"employee.h"
+
+1637968474 source:c:\users\lucas\desktop\tp_2\sworkstation.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"workStation.h"
+
+1637968474 c:\users\lucas\desktop\tp_2\workstation.h
+

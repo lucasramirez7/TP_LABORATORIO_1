@@ -3,6 +3,10 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
+#define EMPTY 0
+#define BINARY 1
+#define TEXT_SAVE 2
+#define BINARY_SAVE 3
 
 /****************************************************
     Menu:
@@ -23,18 +27,40 @@ int main()
     FILE* file = NULL;
     file =  fopen("id.bin","wb");
     fwrite(&nextId,sizeof(int),1,file);
-    fclose(file);*/
+    fclose(file);
 
 
-    /*FILE* file2 = NULL;
+    FILE* file2 = NULL;
     file2 =  fopen("data.bin","wb");
     fclose(file2);
+
+
+
+  ******** CREAMOS ARCHIVOS BINARIOS **********
+
+
+    int nextId = 1000;
+    FILE* file = NULL;
+    file =  fopen("id.bin","wb");
+    fwrite(&nextId,sizeof(int),1,file);
+    fclose(file);
+    FILE* file2 = NULL;
+    file2 =  fopen("datos.bin","wb");
+    fclose(file2);
 */
+
+
+
     int option = 0;
     int follow = 0;
+    int flag = EMPTY;
+    int flagIsEmpty = EMPTY;
     LinkedList* employeeList = ll_newLinkedList();
 
-    do{
+     do{
+
+        flagIsEmpty = ll_isEmpty(employeeList);
+
         system("cls");
         puts("*****MENU DE OPCIONES***** \n");
         puts("1- Cargar los datos de los empleados desde el archivo data.csv (modo texto)."); //OK CARGAR LOS DATOS EN RAM A LA LINKEDLIST
@@ -53,22 +79,48 @@ int main()
         switch(option)
         {
             case 1:
+
                 controller_loadFromText("data.csv",employeeList);
+                flag = BINARY;
+
                 break;
             case 2:
-                controller_loadFromBinary("data.bin",employeeList);
+                if(flag == BINARY){
+                controller_loadFromBinary("datos.bin",employeeList);
+                flag = TEXT_SAVE;
+                }else{
+                    system("cls");
+                    puts("Primero se tiene que cargar los datos de texto (opcion 1)");
+                }
                 break;
             case 3:
                 controller_addEmployee(employeeList);
                 break;
             case 4:
+                if(flagIsEmpty == 0){
                 controller_editEmployee(employeeList);
+                } else {
+                    puts("no hay datos cargados");
+                }
                 break;
             case 5:
+                if(flagIsEmpty == 0){
                 controller_removeEmployee(employeeList);
+                } else {
+                    puts("no hay datos cargados");
+                }
                 break;
             case 6:
                 controller_ListEmployee(employeeList);
+                break;
+            case 8:
+                if(flag == TEXT_SAVE){
+                controller_saveAsText("data.csv",employeeList);
+                flag = BINARY_SAVE;
+                }
+                break;
+            case 9:
+                controller_saveAsBinary("datos.bin",employeeList);
                 break;
             case 10:
                 puts("El programa se ha cerrado correctamente");
@@ -80,6 +132,7 @@ int main()
         }
         system("pause");
     }while(follow == 0);
+
 
     return 0;
 }

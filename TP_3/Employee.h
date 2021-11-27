@@ -26,7 +26,7 @@ int employee_gethoursWorked(sEmployee* this,int* hoursWorked);
 int employee_setSalary(sEmployee* this, int salary);
 int employee_getSalary(sEmployee* this, int* salary);
 
-//int employee_searchId(sEmployee* this, int* id);
+int employee_searchId(sEmployee* this, int* id);
 
 int employee_dates(sEmployee* this, int auxId, char *auxName, int auxHours, int auxSalary);
 
